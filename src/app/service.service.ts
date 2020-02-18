@@ -12,7 +12,7 @@ export class ServiceService {
   constructor(private http: HttpClient) { }
 
   getEmp() {
-    return this.http.get<Employee[]>(this.getUrl);
+    return this.http.get(this.getUrl);
   }
 
   updateEmp(id: number, data: Employee) {

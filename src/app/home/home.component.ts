@@ -23,10 +23,10 @@ export class HomeComponent implements OnInit {
   }
 
   employeeData() {
-    this.service.getEmp().subscribe(res => {
-      this.employeeList = res['data'];
+    this.service.getEmp().subscribe((res: any) => {
+      this.employeeList = res.data;
       this.dataSource = this.employeeList;
-      console.log(this.employeeList);
+      // console.log(this.employeeList);
       console.log(res);
     });
   }
