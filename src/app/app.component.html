@@ -1,0 +1,86 @@
+<mat-sidenav-container class="example-container">
+  <mat-sidenav #sidenav mode="side">
+    <mat-nav-list>
+
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Expansion
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <a mat-list-item routerLink="/home">Home</a>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Profile
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <a mat-list-item >Profile</a>
+          <a mat-list-item >Log Out</a>
+        </mat-expansion-panel>
+
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Setting
+            </mat-panel-title>
+          </mat-expansion-panel-header>
+          <a mat-list-item >Profile Setting</a>
+          <a mat-list-item >General Setting</a>
+        </mat-expansion-panel>
+      </mat-accordion>
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+<button mat-icon-button class='abc'>
+  <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+</button>
+
+        <span>My App</span>
+
+
+    <span class="example-fill-remaining-space"></span>
+
+      <mat-icon matBadge="4" matBadgeColor="accent">notifications</mat-icon>
+
+
+      <button class='abc' mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>
+          <mat-icon>dialpad</mat-icon>
+          <span>Redial</span>
+        </button>
+        <button mat-menu-item disabled>
+          <mat-icon>voicemail</mat-icon>
+          <span>Check voice mail</span>
+        </button>
+        <button mat-menu-item>
+          <mat-icon>notifications_off</mat-icon>
+          <span>Disable alerts</span>
+        </button>
+      </mat-menu>
+
+
+  </mat-toolbar>
+
+  <!-- <div class="grid">
+    <mat-grid-list cols="2" rowHeight="2:1">
+      <mat-grid-tile>1</mat-grid-tile>
+      <mat-grid-tile>1</mat-grid-tile>
+      <mat-grid-tile>1</mat-grid-tile>
+      <mat-grid-tile>1</mat-grid-tile>
+    </mat-grid-list>
+  </div> -->
+
+      <router-outlet></router-outlet>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+

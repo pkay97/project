@@ -1,0 +1,22 @@
+<div>
+  <h1>Form</h1>
+
+<form [formGroup]="empForm">
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput type="text" formControlName="name">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Salary</mat-label>
+    <input matInput type="text" formControlName="salary">
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Age</mat-label>
+    <input matInput type="text" formControlName="age">
+  </mat-form-field>
+
+  <button mat-raised-button color="primary" (click)="submit(data.emp.id)">Update</button>
+</form>
+</div>
