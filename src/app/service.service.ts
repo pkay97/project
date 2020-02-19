@@ -16,7 +16,6 @@ export class ServiceService {
   }
 
   updateEmp(id: number, data: Employee) {
-    console.log(id, data);
     return this.http.put(`${this.updateUrl}/${id}`, data);
   }
 }
